@@ -1,0 +1,216 @@
+.indexTop img {width:100%;max-width:660px;}
+
+#foo {
+    width: 1px; height:1px; line-height:1px;
+}
+.luntan{width: 100%;    margin: auto;} 
+.luntan2{ margin-bottom:2rem; width:80%;}  
+.luntan3{ margin-bottom:0rem; width:100%;}
+
+      ul,li{list-style: none;}
+      /*.luntan ul li.li_green {background-color: #008100;}
+      .luntan ul li.li_green2 {background-color: #ff0000;}
+      .luntan ul li.li_green3 {background-color: #810000;}*/
+      .luntan ul li {display: block;width: 100%;border-bottom: 1px solid #808000;}
+      .luntan ul li a {line-height: 2rem;font-size: 1.3rem;display: block;}
+      a:hover {cursor: pointer;}
+      a {display: block;text-decoration: none;color: #0000FF;font-weight: bold;text-align: center;}
+        .yellow {color:black;}
+        .i_qunhao {border: 1px dashed #ffcc99;padding: 5px;background-color: #fff9f2;margin: 5px 0;color: #000000; font-size:1rem; text-align:center; }
+        ._top {color: #0634e0;}
+
+        .luntan ul li.li_green11 a{background-color: #FF6A6A; color:white;}
+        .luntan ul li.li_green12 {background-color: #FF6A6A; color:white;}
+        .red11 {color: white;font-size:0.8rem;}
+        .blue11 {color:white;font-size:0.8rem;}
+
+        .font1{color: rgb(0, 0, 0); font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 25.2000007629395px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);}
+.red {
+    color: red;
+}
+.toper_ad2 a {line-height: 1.3em;display: block;padding-bottom: 10px;color: #000000;font-size: 1.1em;font-weight: bold;}
+.toper_go2 a {font-size: 1.1em;background-color: #ff5555;display: block;padding: 10px;font-weight: bold;color: #ffffff;}
+
+.toper_go3 a {margin-top:2px; font-size: 1.1em;display: block;padding: 10px;font-weight: bold;color: #000;background-color: #FF9;border: 1px solid #FFEABD;line-height: 1.2em;padding: 10px;font-weight: bold;}
+
+.btcode {
+    display: block;
+    margin: 0 auto !important;
+    width: 100%;
+    border-radius: 0px !important;
+    font-size: 1rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;left:0px;    
+    font-weight: bold;margin: auto;
+}
+.btcode2 {
+    display: block;
+    margin: 0 auto !important;
+    width: 100%; height:5rem; max-width:660px;
+    border-radius: 0px !important;
+    background: #0553F8 !important;
+    padding-top: 3px;
+    text-align:center;
+}
+
+
+
+.textbox a{color:#949494;}
+
+a.noline {
+    color: #333333;
+}
+.i_qunhao {
+    border: 1px dashed #ffcc99;
+    padding: 5px;
+    background-color: #fff9f2;
+    display: block;
+    margin: 5px 0;
+    color: #000000; font-size:1.5rem;
+}
+.i_qunhao a{display: inline;color: #0000cc;}
+.toper_go4{background-color:#e2d6e8; color:black; text-align:center; font-size:1.6rem; line-height:3rem;}
+.toper_go5{background-color:#000; color:yellow; text-align:center; font-size:1.3rem; line-height:3rem;}
+.i_new {background-color: #f6f3d4;text-align:center;}
+.i_new a {display: inline;color: #0000cc;}
+.i_new ul li{margin-left:10rem; text-align:left;}
+.i_newLiuHe ul li{padding-left:10rem; text-align:left; margin-left:0px;}
+
+.i_new2{width:100%}
+.i_new2 a{color:#FF00FF;  line-height:2rem;}
+.i_new3{width:100%;font-size:1.2rem;line-height:2.5rem;}
+.i_new3 ul li{border-bottom:1px solid #e1e1e1; margin-left:0px; padding-left:10rem;}
+.lefts{float:left;}
+a.noline{color:black;}
+
+.tableTuWen {border: solid 1px #66F; background-color:#fdff77;}
+.tbodyTuWen  {display: table-row-group;vertical-align: middle;
+    border-color: inherit; color:#000; text-align:center; font-size:1.5rem;font-family: "Microsoft YaHei"; font-weight:bolder;
+}
+.tbodyTuWen th {background-color:#fdff77;border:solid 1px #6b66f9;}
+.tbodyTuWen td{border:solid 1px #6b66f9;}
+
+.tbodyTuWen a{text-decoration: none;font-size: medium; font-weight:normal;}
+.tbodyTuWen a:visited {color: #00ff00;}
+.tbodyTuWen a:link {color: #800000;}
+.tbodyTuWen a:hover {color: #ff18f0;}
+.tbodyTuWen a.TuWenHot {color:#289b35;}
+
+.tbodyTuWen2{font-size:1rem;}
+.tbodyTuWen2 a{font-size:0.7rem;}
+
+.footer{ margin-top:0px; margin-bottom:1rem;}
+.l150 a{font-size:1.4rem; }
+.qqQun a img{
+    text-align: center;width:25rem; height:25rem; display:block; margin: 0 auto;
+}
+
+.words {
+    width: 100%;
+    margin: auto;
+    font-size: 1rem;
+    line-height: 2rem; background-color:#f6f3d4;
+}
+.words a{font-size:1.2rem; line-height:1.5rem;}
+.words a:hover{ text-decoration:none;}
+.wrods2 a{font-size:1.3rem; line-height:2.5rem;}
+.peach {
+    color: #CC00FF;
+}
+.purple {
+    color: #551A8B;
+}
+.black {
+    color: #000000;
+}
+
+.i_block {
+    background-color: #ffffff;
+}
+.i_tu_nav,.i_tu_nav tr,.i_tu_nav tr td{border:solid 1px rgb(255, 255, 255); }
+
+
+
+.luntan3 { height:6rem; background-color:none;}
+.luntan3 ul li {line-height: 2.2rem; max-width:778px;}
+.luntan3 ul li a{line-height: 2.3rem;font-size: 0.9rem;padding:5px 0px 5px 0px;}
+.luntan3 img{width:1.5rem; height:0.7rem;}
+.luntan4{background-color:#00ff00;padding: 0px; }
+.liLiuHe{border-bottom:1px solid #e1e1e1; background-color:#e8fae9;margin:0px;text-align:left;}
+
+
+.liuHetr{background-color:#008000; font-size:1.3rem; color:#FFFFFF; height:2rem; text-align:center;}
+.liLiuHe1{}
+.liLiuHe2{color:#3abc40; width:30%; text-align:center;}
+.liLiuHe3{color:#f36979;}
+
+.liMaBao{background-color: #fdff77;}
+.liMaBao a{background-color: #fdff77;display:block; color:#850500; border:1px solid #8c85dd;width:33%; float:left;
+          border-right:0px; border-top:0px;font-weight:normal; font-size:1rem; line-height:2rem;
+}
+.MaBaoTop{background-color: #fdff77;border:1px solid #8c85dd; text-align:center; width:99%; }
+a.aMaBao:hover{color:green; font-weight:bold; text-decoration:none;}
+.MaBaoTable{max-width:660px; margin:0px auto;}
+
+.tableMeLiNvShen ul li{width:20%;display:block; float:left;}
+.tableMeLiNvShen img{width:100%; height:100%;}
+
+.liMaBao2 a,.liMaBao4 a,.liMaBao11 a,.liMaBao12 a,.liMaBao16 a,.liMaBao20 a,.liMaBao22 a,.liMaBao27 a,.liMaBao35 a,.liMaBao37 a,.liMaBao43 a,.liMaBao47 a{color:#289b35;}
+
+.liMaBao48 a,.liMaBao49 a,.liMaBao50 a,.liMaBao51 a,.liMaBao52 a,.liMaBao53 a,.liMaBao54 a,.liMaBao55 a,.liMaBao56 a{background-color:#ccffcc;}
+.liMaBao48 a,.liMaBao51 a,.liMaBao54 a{color:red;}
+.liMaBao49 a,.liMaBao52 a,.liMaBao55 a{color:blue;}
+.liMaBao50 a,.liMaBao53 a,.liMaBao56 a{color:#FF00FF}
+
+.liLiuHeNo0{color:blue;}
+.liLiuHeNo7{ color:#FF0000;}
+.liLiuHeNo2{ color:#9933FF;}
+.liLiuHeNo3{ color:#808000;}
+.liLiuHeNo4{ color:red;}
+.liLiuHeNo9{ color:#551A8B;}
+.a_title2{margin:0px; padding:0px; width:100%; display:block; height:2rem;text-align:center; }
+.a_title2{ max-width: 660px;margin: 0px auto; text-align:center;height: auto;margin-bottom:4.5rem;}
+.divInfo{height:auto;width:100%;}
+.divInfo2{height:auto;width:100%;background-color: #e8fae9;}
+.divInfo2 ul li{text-align:left; padding-left:10rem;}
+
+.i_new h3{background-color: green; color: white;}
+
+.cuxiao{margin:auto;width:100%;margin-top:46px;max-width:660px; }
+.cuxiao img{width:100%; max-width:660px;display:block}
+.i_new3{background-color:white;text-align:center; }
+
+.i_new4{ margin:0 auto;width:100%;max-width:660px;}
+.TiShi { font-size: -webkit-xxx-large;color: rgb(255, 0, 0);line-height:4rem;}
+.TiShi2{font-size: large;color: rgb(255, 0, 0);}
+.blues{color:#0000FF}
+.zhaiHang{ line-height:1.5rem; font-weight:bold;}
+.mod_box{margin:0px auto; width:100%; max-width:660px;}
+.mod_box a{line-height:2.5rem;}
+
+.btn{text-align:center; font-size:1.5rem; line-height:24px; padding:5px 10px; color:#FFFFFF;}
+a.btn:hover {color:white;}
+.btnBottom{ vertical-align:middle; line-height:5rem;color:#0088ff;background-color:#e1e7f4; font-size:2rem;}
+a.btnBottom:hover{color:#0088ff;}
+.btnBottom2{ padding-top:1rem; }
+.btntop { padding:0px;}
+a.btntop{font-size:1.3rem;line-height:2rem;}
+a.btntop:hover{color:#000;}
+a.btn2:hover {color:red;font-size:1.4rem;padding:0px; margin:0px;}
+a.btn3:hover {color: red;}
+a.btn4 {color: red; font-size:1.1rem; padding:0px;margin:0px;}
+a.btn4:hover {color: red;}
+a.btn5{font-size:1.1rem;}
+a.btn5:hover{color:green;}
+a.btn6{ color: red; font-size:1.1rem; padding:0px;margin:0px; line-height:1.5rem;}
+a.btn6:hover {color: green;}
+.pinch-zoom{margin:0px auto; text-align:center; }
+.btntop img{width:300px;}
+.ShengXiaoZhun{color:red;}
+.ShengXiaoCuo{color:black}
+.blue{color:blue;}
+.to100{width:100%;}
+
+
+

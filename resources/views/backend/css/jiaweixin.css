@@ -1,0 +1,63 @@
+#shadowhide
+{
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display:none;
+    }
+.tankuang {
+    /*position:absolute; top:50%;left:50%; width:500px; height:500px; margin-top:-250px; margin-left:-250px;*/
+    width: 384px;
+    height: 384px;
+    background-color:white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -192px;
+    margin-top: -192px;
+    border-radius: .5rem;
+    text-align: center;
+    font-size:1rem;
+    }
+
+.tankuang a { text-decoration:none;}
+.copytxt{
+    font-size: 1.7rem;  color:blue;
+    line-height: 3rem; padding-left:2rem; padding-right:2rem;
+}
+.green{color:green;}
+.copylink  a{
+    background-color: #FF6B6B;
+    height: 3rem;
+    text-align: center;
+    margin-top: 2rem;font-size: 2rem;color:white; vertical-align:middle;
+}
+.copylink  a:hover{color:green;}
+.close {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: .125rem;
+    top: .125rem;
+    border:none;
+    vertical-align:middle;
+    }
+.close:hover { cursor:pointer;}
+.jiaw:hover { cursor:pointer;}
+@media only screen and (max-width:640px)
+{
+    .jiamain span { font-size:1rem;}
+}
+
+.tankuang_title {
+    margin: 15px 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;color:red;
+}
+
