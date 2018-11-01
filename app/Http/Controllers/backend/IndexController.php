@@ -15,7 +15,8 @@ class IndexController extends MyController
     }
 
     public function showindex(){
-        return view('backend.index');
+        $dailiInfo = Daili::find(session('daili_id'))->toArray();
+        return view('backend.index',compact('dailiInfo'));
     }
 
     //注销用户

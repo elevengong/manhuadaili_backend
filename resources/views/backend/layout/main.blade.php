@@ -73,6 +73,8 @@
 
             <dd style="display: none">
                 <ul>
+                    <li><a data-href="{{url('/backend/showindex')}}" href="javascript:void(0)" onclick="clicklink(this)" title="我的面板">我的面板</a></li>
+                    <li><a data-href="{{url('/backend/depositlist')}}" href="javascript:void(0)" onclick="clicklink(this)" title="下线充值">下线充值列表</a></li>
                     <li><a data-href="{{url('/backend/withdrawlist')}}" href="javascript:void(0)" onclick="clicklink(this)" title="提款订单">提款订单列表</a></li>
                 </ul>
             </dd>

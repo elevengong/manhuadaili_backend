@@ -23,15 +23,15 @@ Route::group(['middleware' => ['web','daili.login']],function () {
     Route::any('/backend/showindex','backend\IndexController@showindex');
 
 
+    //下线充值
+    Route::get('/backend/depositlist','backend\DepositController@depositlist');
+
     //代理提款
     Route::any('/backend/withdrawlist','backend\WithdrawController@withdrawlist');
-
+    Route::delete('/backend/cancelwithdraw/{withdraw_id}','backend\WithdrawController@cancelwithdraw')->where(['withdraw_id' => '[0-9]+']);
 
     //流量分析
-    Route::any('/backend/traffic','backend\IndexController@traffic');
-
-
-
+    Route::get('/backend/traffic','backend\TrafficController@traffic');
 
     //图片上传
     Route::any('/backend/uploadphoto/{id}','MyController@uploadphoto');
