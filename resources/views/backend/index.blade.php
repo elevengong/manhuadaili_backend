@@ -11,24 +11,25 @@
                             <th width="50">代理名</th>
                             <th width="50">总可用佣金金额</th>
                             <th width="50">冻结佣金金额</th>
-                            <th width="50">今天佣金数</th>
+                            <th width="100">今天佣金总额({{$date}})</th>
                             <th width="50">佣金比例</th>
                             <th width="150">推广链接</th>
-                            <th width="70">操作</th>
+                            <th width="100">操作</th>
                         </tr>
                         </thead>
                         <tbody>
+                        <tr class="text-c">
                         <td style="text-align: center;">{{$dailiInfo['daili_name']}}</td>
-                        <td style="text-align: center;">{{$dailiInfo['current_commision']}}</td>
-                        <td style="text-align: center;">{{$dailiInfo['frzon_commision']}}</td>
-                        <td style="text-align: center;">？？？</td>
+                        <td style="text-align: center;">{{$dailiInfo['current_commision']}}元</td>
+                        <td style="text-align: center;">{{$dailiInfo['frzon_commision']}}元</td>
+                        <td style="text-align: center;">{{$todaycommision}}元</td>
                         <td style="text-align: center;">{{$dailiInfo['commission_rate']*100}}%</td>
-                        <td>??/daili/{{$dailiInfo['daili_id']}}</td>
+                        <td style="text-align: center;"><a target="_blank" href="{{$staticArray[1]}}daili/{{$dailiInfo['daili_id']}}">{{$staticArray[1]}}daili/{{$dailiInfo['daili_id']}}</a></td>
                         <td style="text-align: center;">
-                            <input id="cancelorder" type="button" onclick="setaccount()" class="btn btn-primary  radius" value="设置提款信息">
-                            <input id="cancelorder" type="button" onclick="applywithdraw()" class="btn btn-primary  radius" value="申请提款">
+                            <input id="cancelorder" type="button" onclick="setaccount();" class="btn btn-primary  radius" value="设置提款信息">
+                            <input id="cancelorder" type="button" onclick="applywithdraw();" class="btn btn-primary  radius" value="申请提款">
                         </td>
-
+                        </tr>
                         </tbody>
                     </table>
                 </div>
