@@ -24,3 +24,35 @@ function cancelorder(withdraw_id) {
         });
     });
 }
+
+function applywithdraw() {
+    $.ajax({
+        type:"post",
+        url:"/backend/withdraw",
+        dataType:'json',
+        headers:{'X-CSRF-TOKEN':$('input[name="_token"]').val()},
+        success:function(data){
+            if(data.status == 0)
+            {
+                layer.msg( data.msg );
+            }else{
+                var index = layer.open({
+                    type: 2,
+                    title: "申请提款",
+                    closeBtn: 0,
+                    area: ['800px', '400px'], //宽高
+                    shadeClose: true,
+                    resize:false,
+                    content: '/backend/applywithdraw'
+                });
+            }
+        },
+        error:function (data) {
+            layer.msg('Error!');
+        }
+    });
+}
+
+function setaccount() {
+    window.location.href ='/backend/setwithdrawaccount';
+}

@@ -29,9 +29,14 @@ Route::group(['middleware' => ['web','daili.login']],function () {
     //下线注册
     Route::get('/backend/userlist','backend\IndexController@userlist');
 
+    //设置提款帐号
+    Route::any('/backend/setwithdrawaccount','backend\WithdrawController@setwithdrawaccount');
+
     //代理提款
     Route::any('/backend/withdrawlist','backend\WithdrawController@withdrawlist');
     Route::delete('/backend/cancelwithdraw/{withdraw_id}','backend\WithdrawController@cancelwithdraw')->where(['withdraw_id' => '[0-9]+']);
+    Route::post('/backend/withdraw','backend\WithdrawController@withdraw');
+    Route::any('/backend/applywithdraw','backend\WithdrawController@applywithdraw');
 
     //流量分析
     Route::get('/backend/traffic','backend\TrafficController@traffic');
