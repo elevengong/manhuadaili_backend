@@ -2,8 +2,9 @@ function editaccountprocess() {
     //$('#btn_add_ok').css('display','none');
     var alipay = $.trim( $('#alipay').val() );
     var alipay_name = $.trim( $('#alipay_name').val() );
-    var weixin = $.trim( $('#weixin').val() );
-    var weixin_name = $.trim( $('#weixin_name').val() );
+    var bank = $.trim( $('#bank').val() );
+    var bank_name = $.trim( $('#bank_name').val() );
+    var bank_accountname = $.trim( $('#bank_accountname').val() );
 
     if(alipay != ''){
         if(alipay_name == ''){
@@ -11,9 +12,9 @@ function editaccountprocess() {
             return false;
         }
     }
-    if(weixin != ''){
-        if(weixin_name == ''){
-            layer.msg( '微信名字不能为空！' );
+    if(bank != ''){
+        if(bank_name == ''){
+            layer.msg( '银行相关信息不能为空！' );
             return false;
         }
     }
@@ -28,6 +29,7 @@ function editaccountprocess() {
             if(data.status == 0)
             {
                 layer.msg( data.msg );
+                window.location.reload();
             }else{
                 layer.msg( data.msg);
             }

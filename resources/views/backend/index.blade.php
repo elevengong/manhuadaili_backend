@@ -34,7 +34,6 @@
                         </tbody>
                     </table>
                 </div>
-                代理提款只支持支付宝和卡，要改
             </article>
 
         </div>

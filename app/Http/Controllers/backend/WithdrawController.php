@@ -81,7 +81,7 @@ class WithdrawController extends MyController
             }
             echo json_encode($reData);
         }else{
-            $daili = Daili::select('alipay','alipay_name','weixin','weixin_name')->find(session('daili_id'))->toArray();
+            $daili = Daili::select('alipay','alipay_name','bank','bank_name','bank_accountname')->find(session('daili_id'))->toArray();
             return view('backend.setwithdrawaccount',compact('daili'));
         }
 
@@ -90,8 +90,8 @@ class WithdrawController extends MyController
     public function withdraw(Request $request){
         if($request->isMethod('post')){
             //判断当前代理是否填有支付信息
-            $daili = Daili::select('alipay','alipay_name','weixin','weixin_name')->find(session('daili_id'))->toArray();
-            if(empty($daili['alipay']) and empty($daili['weixin']))
+            $daili = Daili::select('alipay','alipay_name','bank','bank_name','bank_accountname')->find(session('daili_id'))->toArray();
+            if(empty($daili['alipay']) and empty($daili['bank']))
             {
                 $reData['status'] = 0;
                 $reData['msg'] = "请先设置收款帐号!";
@@ -152,7 +152,7 @@ class WithdrawController extends MyController
                             if($paytype == 0){
                                 $input['withdraw_info'] = '支付宝:'.$dailiDetail[0]['alipay'].'--提款人:'.$dailiDetail[0]['alipay_name'];
                             }else{
-                                $input['withdraw_info'] = '微信:'.$dailiDetail[0]['weixin'].'--提款人:'.$dailiDetail[0]['weixin_name'];
+                                $input['withdraw_info'] = '银行帐号:'.$dailiDetail[0]['bank'].'--开户银行:'.$dailiDetail[0]['bank_name'].'--开户人:'.$dailiDetail[0]['bank_accountname'];
                             }
                             $input['order_no'] = time().rand(10,99);
                             $input['status'] = 0;

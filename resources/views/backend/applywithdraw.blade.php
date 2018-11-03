@@ -38,9 +38,9 @@
                     @if(!empty($daili['alipay']))
                     <option value="0">支付宝：{{$daili['alipay']}}--收款人：{{$daili['alipay_name']}}</option>
                     @endif
-                        @if(!empty($daili['weixin']))
-                            <option value="0">支付宝：{{$daili['weixin']}}--收款人：{{$daili['weixin_name']}}</option>
-                        @endif
+                    @if(!empty($daili['bank']))
+                    <option value="1">银行帐号：{{$daili['bank']}}--开户银行：{{$daili['bank_name']}}--开户银行：{{$daili['bank_accountname']}}</option>
+                    @endif
                 </select>
             </div>
         </div>
