@@ -13,6 +13,7 @@
 //---------------------后台------------------------
 Route::group(['middleware' => ['web']],function () {
     Route::any('/','backend\LoginController@login');
+    Route::any('/register','backend\LoginController@register');
     Route::get('/backend/code','backend\LoginController@code');
 });
 

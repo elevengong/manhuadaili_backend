@@ -12,16 +12,25 @@
     <link href="<?php echo asset( "/resources/views/backend/static/h-ui.admin/css/style.css") ?>" rel="stylesheet" type="text/css" />
     <link href="<?php echo asset( "/resources/views/backend/static/Hui-iconfont/1.0.8/iconfont.css") ?>" rel="stylesheet" type="text/css" />
 
-    <title>漫画代理系统后台</title>
-    <meta name="keywords" content="漫画代理系统后台">
-    <meta name="description" content="漫画代理系统后台">
+    <title>漫画代理注册</title>
+    <meta name="keywords" content="漫画代理注册">
+    <meta name="description" content="漫画代理注册">
+    <style>
+        .loginBox {
+            height: 355px !important;
+            margin-left: -309px !important;
+            margin-top: -192px !important;
+            padding-top: 13px !important;
+        }
+
+    </style>
 </head>
 <body>
 <div class="header1"></div>
 <div class="loginWraper">
     <div id="loginform" class="loginBox">
-        <div style="text-align: center;font-size: 16px;">登陆&nbsp;|&nbsp;<a href="/register">注册</a></div>
         <form class="form form-horizontal" action="#" method="post">
+            <div style="text-align: center;font-size: 16px;"><a href="/">登陆</a>&nbsp;|&nbsp;注册</div>
             {{csrf_field()}}
             <div class="row cl">
                 <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60d;</i></label>
@@ -36,6 +45,12 @@
                 </div>
             </div>
             <div class="row cl">
+                <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+                <div class="formControls col-xs-8">
+                    <input id="repwd" name="repwd" type="password" placeholder="重复密码" class="input-text size-L">
+                </div>
+            </div>
+            <div class="row cl">
                 <div class="formControls col-xs-8 col-xs-offset-3">
                     <input class="input-text size-L" type="text" id="code" name="code" placeholder="验证码" style="width:150px;">
                     <img src="/backend/code" onclick="javascript:this.src='/backend/code?'+Math.random()" style="width: 110px; height: 40px; cursor: pointer;">
@@ -43,7 +58,7 @@
             </div>
             <div class="row cl">
                 <div class="formControls col-xs-8 col-xs-offset-3">
-                    <input id="btn_login" name="btn_login" type="button" class="btn btn-success radius size-L" value="&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;">
+                    <input id="btn_login" name="btn_login" type="button" class="btn btn-success radius size-L" value="&nbsp;注&nbsp;&nbsp;&nbsp;&nbsp;册&nbsp;">
                     <input id="btn_clear" name="btn_clear" type="reset" class="btn btn-default radius size-L" value="&nbsp;取&nbsp;&nbsp;&nbsp;&nbsp;消&nbsp;">
                 </div>
             </div>
@@ -58,19 +73,26 @@
 <script type="text/javascript" src="<?php echo asset( "/resources/views/backend/js/baseCheck.js");?>"></script>
 <script>
     $(function(){
-        $("#btn_login").click( function(){
+        $("#btn_login").click( function() {
             var name = $("#name").val();
             var pwd = $("#pwd").val();
+            var repwd = $("#repwd").val();
             var code = $("#code").val();
 
-            if( !isUname_(name) || !( name.length >= 5 && name.length <= 20 ) ){
+            if (!isUname_(name) || !( name.length >= 5 && name.length <= 20 )) {
                 layer.msg("请输入字母、数字、下划线组成的6-20位的用户名");
                 $('#name').focus();
                 return false;
             }
 
-            if( !isUname(pwd) || !( pwd.length >= 6 && pwd.length <= 20 ) ){
+            if (!isUname(pwd) || !( pwd.length >= 6 && pwd.length <= 20 )) {
                 layer.msg("请输入字母、数字组成的6-20位的密码");
+                $('#pwd').focus();
+                return false;
+            }
+
+            if (repwd != pwd){
+                layer.msg("密码不相同");
                 $('#pwd').focus();
                 return false;
             }
@@ -80,13 +102,13 @@
                 $('#code').focus();
                 return false;
             }
-            var datas = { name: name, pwd: pwd, code: code};
+            var datas = { name: name, pwd: pwd, code: code, repwd: repwd};
             var msg = '';
             var id = '';
 
             $.ajax({
                 type:"post",
-                url:"/",
+                url:"/register",
                 dataType:'json',
                 headers:{'X-CSRF-TOKEN':$('input[name="_token"]').val()},
                 data:datas,

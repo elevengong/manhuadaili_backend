@@ -67,6 +67,49 @@ class LoginController extends MyController
 
     }
 
+    public function register(Request $request){
+        if($request->isMethod('post')){
+            //$loginIp = $request->getClientIp();
+            $name = request()->input('name');
+            $pwd = request()->input('pwd');
+            $repwd = request()->input('repwd');
+            $code = request()->input('code');
+
+            if(strtolower($code) != session('code')){
+                $reData['status'] = 0;
+                $reData['msg'] = '验证码输入不正确';
+            }else{
+                if($pwd != $repwd){
+                    $reData['status'] = 0;
+                    $reData['msg'] = '密码不相同';
+                }else{
+                    $data['pwd']= Crypt::encrypt(request()->input('pwd'));
+                    $data['daili_name'] = $name;
+                    $data['commission_rate'] = '0.5';
+                    $result = Daili::where('daili_name',$data['daili_name'])->get()->toArray();
+                    if(empty($result))
+                    {
+                        $insert_result = Daili::create($data);
+                        if($insert_result->daili_id){
+                            $reData['status'] = 1;
+                            $reData['msg'] = "注册成功";
+                        }else{
+                            $reData['status'] = 0;
+                            $reData['msg'] = "添加失败";
+                        }
+                    }else{
+                        $reData['status'] = 0;
+                        $reData['msg'] = "该用户名已注册";
+                    }
+                }
+
+            }
+            echo json_encode($reData);
+        }else{
+            return view('backend.register');
+        }
+    }
+
     //缩略图
     public function code(){
         $code = new \ValidateCode();

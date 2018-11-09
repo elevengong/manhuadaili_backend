@@ -21,7 +21,7 @@ class DepositController extends MyController
         $orders = OrderDeposit::select('orderdeposit.*','users.user_name')
             ->leftJoin('users',function ($join){
                 $join->on('users.uid','=','orderdeposit.uid');
-            })
+            })->where('orderdeposit.daili_id',session('daili_id'))
             ->orderBy('orderdeposit.created_at', 'desc')->paginate($this->backendPageNum);
         return view('backend.depositlist',compact('orders','newType'));
     }
