@@ -30,7 +30,7 @@
     <!--[if IE 6]>
     <!--/meta 作为公共模版分离出去-->
 
-    <title>代理系统后台</title>
+    <title>漫画代理系统后台</title>
 </head>
 <body>
 

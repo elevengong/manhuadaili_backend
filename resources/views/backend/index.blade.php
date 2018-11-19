@@ -25,7 +25,7 @@
                         <td style="text-align: center;">{{$dailiInfo['frzon_commision']}}元</td>
                         <td style="text-align: center;">{{$todaycommision}}元</td>
                         <td style="text-align: center;">{{$dailiInfo['commission_rate']*100}}%</td>
-                        <td style="text-align: center;"><a target="_blank" href="{{$staticArray[1]}}daili/{{$dailiInfo['daili_id']}}">{{$staticArray[1]}}daili/{{$dailiInfo['daili_id']}}</a></td>
+                        <td style="text-align: center;"><a target="_blank" href="{{$staticArray[5]}}daili/{{$dailiInfo['daili_id']}}">{{$staticArray[5]}}daili/{{$dailiInfo['daili_id']}}</a></td>
                         <td style="text-align: center;">
                             <input type="button" onclick="setaccount();" class="btn btn-primary  radius" value="设置提款信息">
                             <input type="button" onclick="applywithdraw();" class="btn btn-primary  radius" value="申请提款">
